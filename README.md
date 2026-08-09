@@ -1,6 +1,6 @@
 # Freight Rate Prediction
 
-This repository builds a model from `train-test.csv`, predicts `validation.csv`, and fills out December chart inputs.
+This repository builds a freight rate model from raw data, generates validation predictions, and fills December chart inputs.
 
 ## Setup
 
@@ -14,13 +14,15 @@ python -m pip install -r requirements.txt
 python predict_rates.py
 ```
 
+This reads inputs from `data/` and writes outputs to `outputs/`.
+
 This creates:
 
-- `validation_predictions.csv`
-- `data/december_chart_inputs.csv`
+- `outputs/validation_predictions.csv`
+- `outputs/december_chart_inputs.csv`
 
 ## Notes
 
-- Training uses `train-test.csv`.
-- Validation output is populated from `validation-predictions-template.csv`.
-- December predictions are written to `data/december_chart_inputs.csv`.
+- Training uses `data/train-test.csv`.
+- Validation output is populated from `data/validation-predictions-template.csv`.
+- December predictions are read from `data/december-chart-inputs.csv`.

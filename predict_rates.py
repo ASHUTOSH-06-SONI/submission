@@ -209,12 +209,12 @@ def main(args: argparse.Namespace) -> None:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train a freight rate model and generate predictions.')
-    parser.add_argument('--train-file', type=str, default='train-test.csv', help='Training data file')
-    parser.add_argument('--validation-file', type=str, default='validation.csv', help='Validation data file')
-    parser.add_argument('--validation-template', type=str, default='validation-predictions-template.csv', help='Validation output template file')
-    parser.add_argument('--december-file', type=str, default='december-chart-inputs.csv', help='December chart input file')
-    parser.add_argument('--validation-output', type=str, default='validation_predictions.csv', help='Validation output file')
-    parser.add_argument('--december-output', type=str, default='data/december_chart_inputs.csv', help='December output file')
+    parser.add_argument('--train-file', type=str, default='data/train-test.csv', help='Training data file')
+    parser.add_argument('--validation-file', type=str, default='data/validation.csv', help='Validation data file')
+    parser.add_argument('--validation-template', type=str, default='data/validation-predictions-template.csv', help='Validation output template file')
+    parser.add_argument('--december-file', type=str, default='data/december-chart-inputs.csv', help='December chart input file')
+    parser.add_argument('--validation-output', type=str, default='outputs/validation_predictions.csv', help='Validation output file')
+    parser.add_argument('--december-output', type=str, default='outputs/december_chart_inputs.csv', help='December output file')
     parser.add_argument('--holdout-fraction', type=float, default=0.2, help='Holdout fraction for evaluation')
     parser.add_argument('--random-state', type=int, default=42, help='Random seed')
     args = parser.parse_args()
