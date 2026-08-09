@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.vscode/
+*.joblib
+*.log
+sandbox_*.csv
+temp_*.csv
+venv/
+env/
